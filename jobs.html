@@ -1,0 +1,212 @@
+<!-- Created by Thomas Herward, not authroized for distribution -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <link rel="icon" type="image/x-icon" href="images/me.JPG">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-TnlE4eAZy8NLm4K0JmPx6kIb+kbk89J1ssq/ULf+z6IgOzl1Y+5l5kpKPXlUgGJoiKjCU2ZnHkRZZc7pJGdWbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="home.html" id="navbar__logo">Thomas Herward</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="home.html" class="navbar__links"> Home </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="projects.html" class="navbar__links"> Projects </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="jobs.html" class="navbar__links"> Career </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://github.com/therward" class="navbar__links">
+                        GitHub
+                    </a>
+                  </li>
+                  
+                  
+                  
+                  
+                  
+            </ul>
+        </div>
+    </nav>
+
+<!-- Intro -->
+<div class="jobtitle">
+    <div class="jobtitle__container">
+        <div class="jobtitle__content">
+            <h1 class="career-journey">Career Journey</h1>
+            <div style="height: 25px;"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Job Section -->
+<div class="job">
+    <div class="job__container">
+      <!-- Disney Job Card and Content -->
+      <div class="job__content-container">
+        <div class="job__card" id="disney">
+          <div class="job__img--container">
+            <img src="images/disney.png" alt="Disney" class="job__img">
+            <div class="job__overlay">
+              <a href="#" class="job__button" data-job-id="disney">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="job__content" id="disney-content" style="display: none;">
+          <h2>The Disney College Program</h2>
+          <p>During my time in the Disney College Program, I had the opportunity to work as a Cast Member at The Seas with Nemo & Friends attraction in Walt Disney World Resort, Orlando, Florida. My responsibilities included ensuring smooth operation of the ride and the Turtle Talk with Crush interactive show, while providing exceptional guest experiences. Throughout my internship, I consistently applied Disney's Five Keys: Safety, Courtesy, Inclusion, Show, and Efficiency to maintain a high standard of service and create a magical atmosphere for visitors. This valuable experience allowed me to develop my customer service and teamwork skills, while gaining a deeper understanding of the inner workings of a world-renowned entertainment company.</p>
+          <a href="#" class="job__back-button" onclick="hideJobPopup()">Back</a>
+        </div>
+      </div>
+  
+<!-- Mix Job Card and Content -->
+<div class="job__content-container">
+    <div class="job__card" id="mix">
+      <div class="job__img--container">
+        <img src="images/mix.png" alt="mix" class="job__img">
+        <div class="job__overlay">
+          <a href="#" class="job__button" data-job-id="mix">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="job__content" id="mix-content" style="display: none;">
+      <h2>The Mix</h2>
+      <p>Recently, i have started volunterring for a charity called 'The Mix'. This is an online digital connector role within the charity. The aim of the role is to provide live chat and email services to young people aged under 25 who may need support in situations such as self-harm, mental health, homelessness and suiside plus many more. The role provides the young people with possibilities for helping them in there situation.</p>
+      <a href="#" class="job__back-button" onclick="hideJobPopup()">Back</a>
+    </div>
+  </div>
+  
+  
+  <!-- Moto Job Card and Content -->
+  <div class="job__content-container">
+    <div class="job__card" id="moto">
+      <div class="job__img--container">
+        <img src="images/moto.png" alt="moto" class="job__img">
+        <div class="job__overlay">
+          <a href="#" class="job__button" data-job-id="moto">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="job__content" id="moto-content" style="display: none;">
+      <h2>Moto Hospitality</h2>
+      <p>Moto is a uk service station company. During my time here i have worked in serveral units such as Greggs and the West Cornwall Pasty Compnay. My time at Moto has tought me the importance of strong teamwork and timekeeping.</p>
+      <a href="#" class="job__back-button" onclick="hideJobPopup()">Back</a>
+    </div>
+  </div>
+  
+  
+    <div id="popup" style="display:none;">
+        <div id="popup-content">
+          <div id="popup-header">
+            <h2 id="popup-title"></h2>
+          </div>
+          <div id="popup-body"></div>
+        </div>
+     
+        <script>
+            var learnMoreBtns = document.querySelectorAll(".job__button");
+            for (let i = 0; i < learnMoreBtns.length; i++) {
+              let learnMoreBtn = learnMoreBtns[i];
+              learnMoreBtn.addEventListener("click", function(event) {
+                event.preventDefault();
+                let jobID = this.getAttribute("data-job-id");
+                showJobPopup(event, jobID);
+              });
+            }
+        
+            function showJobPopup(event, jobID) {
+              event.preventDefault();
+        
+        
+              // Set the popup body
+              var popupBody = document.getElementById("popup-body");
+              popupBody.innerHTML = document.getElementById(jobID + "-content").innerHTML;
+        
+              // Show the popup
+              var popup = document.getElementById("popup");
+              popup.style.display = "block";
+            }
+        
+            function hideJobPopup() {
+              var popup = document.getElementById("popup");
+              popup.style.display = "none";
+            }
+        
+            var closeBtn = document.getElementById("close-btn");
+            closeBtn.addEventListener("click", hideJobPopup);
+          </script>
+        
+          
+       
+    </div>
+      </div>
+    </div>
+
+
+
+  <!-- Contact Bar -->
+
+  <div class="contact-bar">
+    <div class="contact-bar__left">
+        <span class="contact-bar__text">Feel free to contact me</span>
+    </div>
+    <div class="contact-bar__right">
+        <a href="contact.html"><button class="email-btn">Email Now</button></a>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Quick Links</h2>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+        </div>
+        <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Social Media</h2>
+                <a href="https://twitter.com/ThomasHerward">Twitter</a>
+                <a href="https://www.linkedin.com/in/thomas-herward-a2494b26b/">Linkedin</a>
+                <a href="https://github.com/therward">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="rights">
+        <div class="social__media--wrap">
+            <br>
+            <p class="website__rights">© Thomas Herward 2022. All Rights Reserved</p>
+        </div>
+        
+    </div>
+</div>
+
+        <script src="app.js"></script>
+    </body>
+</html>             
