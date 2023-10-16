@@ -1350,8 +1350,8 @@ height: 2.5vh;
     border-right: .5vh solid var(--foreground-color);
 }
 
-/* styles.css */
-
+/* 404 */
+/* Default styles for larger screens */
 .error-container {
     display: flex;
     flex-direction: column;
@@ -1363,11 +1363,11 @@ height: 2.5vh;
 }
 
 .error-text {
-    font-size: 24px; /* Adjust the font size to your preference */
+    font-size: 24px;
     color: #ff6347;
     text-align: center;
-    margin-bottom: 20px; /* Add some spacing between the text and the GIF */
-    font-family: 'Arial', sans-serif; /* Set a common web-safe font */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
 .error-gif {
@@ -1375,15 +1375,15 @@ height: 2.5vh;
 }
 
 .error-joke {
-    font-size: 18px; /* Adjust the font size for the joke */
+    font-size: 18px;
     text-align: center;
-    margin-top: 20px; /* Add spacing between the text and the GIF */
-    font-family: 'Arial', sans-serif; /* Set a common web-safe font for the joke */
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
 .return-button {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin to control the spacing between the joke and the button */
+    margin-top: 20px;
 }
 
 .return-link {
@@ -1397,11 +1397,28 @@ height: 2.5vh;
     font-family: 'Kumbh Sans', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s;
-    text-decoration: none; /* Remove the underline */
+    text-decoration: none;
 }
 
 .return-link:hover {
-    background-color: #8db489; /* Button background color on hover */
+    background-color: #8db489;
 }
 
-
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .error-text {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+    
+    .error-joke {
+        font-size: 16px; /* Reduce font size for the joke on smaller screens */
+    }
+    
+    .return-button {
+        margin-top: 10px; /* Reduce the spacing for the button on smaller screens */
+    }
+    
+    .return-link {
+        padding: 10px 20px; /* Reduce padding for the button on smaller screens */
+    }
+}
