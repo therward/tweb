@@ -1350,3 +1350,58 @@ height: 2.5vh;
     border-right: .5vh solid var(--foreground-color);
 }
 
+/* styles.css */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.error-text {
+    font-size: 24px; /* Adjust the font size to your preference */
+    color: #ff6347;
+    text-align: center;
+    margin-bottom: 20px; /* Add some spacing between the text and the GIF */
+    font-family: 'Arial', sans-serif; /* Set a common web-safe font */
+}
+
+.error-gif {
+    max-width: 100%;
+}
+
+.error-joke {
+    font-size: 18px; /* Adjust the font size for the joke */
+    text-align: center;
+    margin-top: 20px; /* Add spacing between the text and the GIF */
+    font-family: 'Arial', sans-serif; /* Set a common web-safe font for the joke */
+}
+
+.return-button {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin to control the spacing between the joke and the button */
+}
+
+.return-link {
+    background-color: #a8d6a4;
+    color: #141414;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove the underline */
+}
+
+.return-link:hover {
+    background-color: #8db489; /* Button background color on hover */
+}
+
+
