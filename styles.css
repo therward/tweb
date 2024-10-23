@@ -8,7 +8,7 @@
 .navbar {
     background: #131313;
     height: 80px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -20,8 +20,8 @@
 .navbar__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;
-    z-index: 1;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
@@ -29,24 +29,21 @@
 }
 
 #navbar__logo {
-    background-color: #ffffff;
-    background-image: linear-gradient(to top, #ffffff 0%, #ffffff
-    100%); 
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; 
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
+    color: transparent;
+    background-image: linear-gradient(to top, #ffffff 0%, #ffffff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
-  
+
 .fa-gem {
-    margin-right:0.5rem;
+    margin-right: 0.5rem;
 }
 
 .navbar__menu {
@@ -57,25 +54,52 @@
 }
 
 .navbar__item {
+    position: relative;
     height: 80px;
 }
 
 .navbar__links {
-    color: #ffff;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    padding: 0% 1rem;
+    padding: 0 1rem;
     height: 100%;
+    transition: color 0.3s ease; /* Smooth transition for text color */
 }
-
-
 
 .navbar__links:hover {
-    opacity: 0.3;
-    transition: all 0.3s ease;
+    color: #abf30e; /* Change only the text color on hover */
 }
+
+/* Dropdown styles */
+.navbar__item:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s ease; /* Smooth transition for dropdown text color */
+}
+
+.dropdown a:hover {
+    color: #abf30e; /* Change only the dropdown text color on hover */
+}
+
 
 @media screen and (max-width: 960px) {
     .navbar__container {
