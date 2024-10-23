@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+    <link rel="icon" type="image/x-icon" href="images/me.JPG">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-TnlE4eAZy8NLm4K0JmPx6kIb+kbk89J1ssq/ULf+z6IgOzl1Y+5l5kpKPXlUgGJoiKjCU2ZnHkRZZc7pJGdWbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+    border: 2px solid #ccc;
+    overflow: auto;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.jobtitle, .buttons-section, .abstract-section, .supplementary-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.jobtitle__container, .buttons__container, .abstract__container, .supplementary__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.jobtitle__content h1, .abstract__content h2, .supplementary__content h2 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+.jobtitle__content h1 {
+    font-size: 3.5rem;
+}
+
+.abstract__content h2, .supplementary__content h2 {
+    font-size: 2rem;
+}
+
+.jobtitle__content, .buttons__content, .abstract__content, .supplementary__content {
+    text-align: center;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button.download {
+    background-color: #28a745;
+}
+
+.button.github {
+    background-color: #333;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button.download:hover {
+    background-color: #218838;
+}
+
+.button.github:hover {
+    background-color: #1d1d1d;
+}
+
+.abstract__content p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+.separator {
+    width: 80%;
+    border-top: 1px solid #ddd;
+    margin: 20px auto;
+}
+
+.supplementary-material {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.supplementary-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 300px; /* Adjust height as needed */
+}
+
+.supplementary-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.supplementary-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.supplementary-item .button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: auto; /* Ensures button stays at the bottom */
+}
+
+.supplementary-description {
+    font-size: 1rem;
+    color: #555;
+    max-width: 80%;
+    margin: 10px auto 30px auto;
+    line-height: 1.5;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">Thomas Herward</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links"> Home </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="projects.html" class="navbar__links"> Projects </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="jobs.html" class="navbar__links"> Career </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://github.com/therward" class="navbar__links"> GitHub </a>
+                </li>
+                <!-- New Services dropdown menu -->
+                <li class="navbar__item">
+                    <a href="#" class="navbar__links"> Services </a>
+                    <div class="dropdown">
+                        <a href="sports.html">Sports</a>
+                        <a href="webdev.html">Website Development</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Title Section -->
+    <div class="jobtitle">
+        <div class="jobtitle__container">
+            <div class="jobtitle__content">
+                <h1 class="career-journey">Dissertation</h1>
+                <div style="height: 25px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="buttons-section">
+        <div class="buttons__container">
+            <div class="buttons__content">
+                <div class="buttons">
+                    <!--need to figure out why this wont display in a dedicated documents folder-->
+                    <a href="20014189_Project-Report.pdf" download="20014189_Project-Report.pdf" class="button download">Download Dissertation</a>
+                    <a href="https://github.com/therward/your-repo" class="button github">View GitHub Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Separator -->
+    <div class="separator"></div>
+
+    <!-- Abstract Section -->
+    <div class="abstract-section">
+        <div class="abstract__container">
+            <div class="abstract__content">
+                <h2>Abstract</h2>
+                <p>
+                    Queueing is an unavoidable part of life from waiting in line at theme parks or a shop to waiting
+for urgent care at hospitals, where queue management can mean life or death. Businesses have
+often turned to queueing theory to optimize operations and ensure that they are able to give the
+best customer experience. This dissertation will research and investigate how neural networks
+and facial recognition can be integrated into queueing theory to be able to provide customers
+with an accurate queueing time. The project aims to identify customers as they enter the queue
+and track there exit, allowing for the total queue time to be calculated. This information would
+then allow businesses to provide it to customers allowing them to make an informed decision on
+whether they wish to join the queue. Furthermore, the system will be able to offer businesses
+insights into the current customer experience by showing them historical data on queue times
+and how their demand fluctuates throughout the day. In addition, the project will investigate the
+ethical considerations and practicality’s of developing this set up for businesses.
+                </p>
+            </div>
+        </div>
+    </div>
+
+      <!-- Separator -->
+      <div class="separator"></div>
+
+    <!-- PDF Container -->
+    <div class="pdf-container">
+        <iframe src="20014189_Project-Report.pdf" type="application/pdf"></iframe>
+    </div>
+
+    <!-- Separator -->
+    <div class="separator"></div>
+
+    <!-- Supplementary Material Section -->
+    <div class="supplementary-section">
+        <div class="supplementary__container">
+            <div class="supplementary__content">
+                <h2>Supplementary Material</h2>
+                <p class="supplementary-description">
+                    Below are additional documents that accompany the diseration.
+                </p>
+                <div class="supplementary-material">
+                    <div class="supplementary-item">
+                        <h3>Project Plan</h3>
+                        <p>This document outlines the plan for the disertation.</p>
+                        <a href="Project_Proposal.pdf" download="Document1.pdf" class="button download">Download</a>
+                    </div>
+                    
+                    <div class="supplementary-item">
+                        <h3>GDPR and Ethics Checklist</h3>
+                        <p>This is a checklist to ensure the project complied with ethical and GDPR rules </p>
+                        <a href="Project_GDPR_and_Ethics_Checklist.pdf" download="Document3.pdf" class="button download">Download</a>
+                    </div>
+                    <div class="supplementary-item">
+                        <h3>Project Poster</h3>
+                        <p>This poster was in the early stages of planning for the disertation. It accounted for up to 10% of the final mark.</p>
+                        <a href="Poster_20014189.pdf" download="Document4.pdf" class="button download">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+  <!-- Contact Bar -->
+<div class="contact-bar">
+    <div class="contact-bar__left">
+        <span class="contact-bar__text">Feel free to contact me</span>
+    </div>
+    <div class="contact-bar__right">
+        <a href="contact.html"><button class="email-btn">Email Now</button></a>
+    </div>
+</div>
+
+
+
+    <!-- Footer -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Quick Links</h2>
+                    <a href="projects.html">Projects</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                    <a href="contact.html">Contact Me</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="https://twitter.com/ThomasHerward">Twitter</a>
+                    <a href="https://www.linkedin.com/in/thomas-herward-a2494b26b/">LinkedIn</a>
+                    <a href="https://github.com/therward">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="rights">
+            <div class="social__media--wrap">
+                <br>
+                <p class="website__rights">© Thomas Herward 2023. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
