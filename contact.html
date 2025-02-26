@@ -13,42 +13,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-TnlE4eAZy8NLm4K0JmPx6kIb+kbk89J1ssq/ULf+z6IgOzl1Y+5l5kpKPXlUgGJoiKjCU2ZnHkRZZc7pJGdWbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
 </head>
 <body>
     <nav class="navbar">
-    <div class="navbar__container">
-        <a href="index.html" id="navbar__logo">Thomas Herward</a>
-        <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">Thomas Herward</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__links"> Home </a></li>
+                <li class="navbar__item"><a href="projects.html" class="navbar__links"> Projects </a></li>
+                <li class="navbar__item"><a href="jobs.html" class="navbar__links"> Career </a></li>
+                <li class="navbar__item"><a href="https://github.com/therward" class="navbar__links"> GitHub </a></li>
+                <li class="navbar__item"><a href="#" class="navbar__links"> Services </a>
+                    <div class="dropdown">
+                        <a href="sports.html">Sports</a>
+                        <a href="webdev.html">Website Development</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="index.html" class="navbar__links"> Home </a>
-            </li>
-            <li class="navbar__item">
-                <a href="projects.html" class="navbar__links"> Projects </a>
-            </li>
-            <li class="navbar__item">
-                <a href="jobs.html" class="navbar__links"> Career </a>
-            </li>
-            <li class="navbar__item">
-                <a href="https://github.com/therward" class="navbar__links"> GitHub </a>
-            </li>
-            <!-- New Services dropdown menu -->
-            <li class="navbar__item">
-                <a href="#" class="navbar__links"> Services </a>
-                <div class="dropdown">
-                    <a href="sports.html">Sports</a>
-                    <a href="webdev.html">Website Development</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+    </nav>
     
     <!-- Contact Page -->
     <div class="contact">
@@ -56,7 +39,7 @@
             <h1>Contact Me</h1>
         </div>
         <div class="contact__form-container">
-            <form action="#" class="contact__form">
+            <form action="https://formsubmit.co/thomasherward@outlook.com" method="POST" class="contact__form">
                 <div class="contact__form-group">
                     <label for="name" class="contact__form-label">Name</label>
                     <input type="text" id="name" name="name" class="contact__form-input" placeholder="Enter your name" required>
@@ -69,42 +52,37 @@
                     <label for="message" class="contact__form-label">Message</label>
                     <textarea id="message" name="message" class="contact__form-input contact__form-textarea" placeholder="Enter your message" required></textarea>
                 </div>
+                <input type="hidden" name="_next" value="thankyou.html">
+                <input type="hidden" name="_captcha" value="false">
                 <button type="submit" class="contact__form-btn">Send Message</button>
                 <div style="height: 75px;"></div>
             </form>
         </div>
     </div>
     
-<!-- Footer -->
-
-<div class="footer__container">
-  <div class="footer__links">
-      <div class="footer__link--wrapper">
-          <div class="footer__link--items">
-              <h2>Quick Links</h2>
-              <a href="projects.html">Projects</a>
-              <a href="cookies.html">Cookie Policy</a>
-              <a href="contact.html">Contact Me</a>
-          </div>
-          <div class="footer__link--items">
-              <h2>Social Media</h2>
-              <a href="https://twitter.com/ThomasHerward">Twitter</a>
-              <a href="https://www.linkedin.com/in/thomas-herward-a2494b26b/">Linkedin</a>
-              <a href="https://github.com/therward">GitHub</a>
-          </div>
-      </div>
-  </div>
-  <div class="rights">
-      <div class="social__media--wrap">
-          <br>
-          <p class="website__rights">© Thomas Herward 2023. All Rights Reserved</p>
-      </div>
-      
-  </div>
-</div>
-            
+    <!-- Footer -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Quick Links</h2>
+                    <a href="projects.html">Projects</a>
+                    <a href="cookies.html">Cookie Policy</a>
+                    <a href="contact.html">Contact Me</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="https://twitter.com/ThomasHerward">Twitter</a>
+                    <a href="https://www.linkedin.com/in/thomas-herward-a2494b26b/">LinkedIn</a>
+                    <a href="https://github.com/therward">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="rights">
+            <div class="social__media--wrap">
+                <p class="website__rights">© Thomas Herward 2023. All Rights Reserved</p>
+            </div>
         </div>
     </div>
-    </footer>
 </body>
-</html>           
+</html>
